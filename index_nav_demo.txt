@@ -1,0 +1,262 @@
+<html>
+    <head>
+        <title>Athulya Assisted Living</title>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="icon" type="image/png" sizes="96x96" href="logo.png">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+<style>
+   *{
+        padding:0;
+        margin:0;
+        box-sizing:border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+  .menubar
+   {
+      text-align:center;
+       
+   }
+ .menubar ul
+  {
+      display:inline flex;
+      list-style:none;    
+      font-weight:700;
+      font-size:18px;
+  }
+ .menubar ul li
+{
+   width:200px;
+   margin:13px;
+   padding:8px;
+   border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+.menubar ul li a
+ {
+     text-decoration:none;
+     color: white;
+      
+ }
+ .active,.menubar li :hover
+ {
+     color:rgb(242,34,131); 
+     border-radius:3px;
+     cursor: pointer;
+ }
+.submenu
+ {
+    display: none;
+    
+ }
+ .submenu ul li :hover 
+ {
+     color:white;
+ }
+.menubar ul li:hover .submenu
+{
+    display: block;
+    position: absolute;
+  background: rgb(42,118,155);    
+  background-color: white
+    margin-top: 15px;
+    margin-left: -15px;
+    color:white;
+   
+}
+
+.submenu1
+{
+    display: none;
+}
+.hover-me:hover .submenu1
+{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 190px;
+    background: rgb(42,118,155);    
+    border-radius: 4px;
+    color:white;
+    
+   
+
+}
+.header{
+    height: 100vh;
+}
+.navbar-style{
+    box-shadow: 0 5px 10px wheat;
+    display: block;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.logo{
+    height: 48px;
+    padding: 2px 10px;
+}
+.login-container {
+    float: right;
+  }
+  
+ input[type=text] {
+    padding: 7px;
+    margin-top: 6px;
+    font-size: 12px;
+    border: 1px solid;
+    border-color: wheat;
+    border-radius: 2px;
+    width:200px;
+    
+  }
+  input[type=password] {
+    padding: 7px;
+    margin-top: 6px;
+    font-size: 12px;
+    border:1px solid;
+    border-radius: 2px;
+    border-color: wheat;
+    width:200px;
+  }
+  
+  .login-container button {
+    float: right;
+    padding: 6px 8px;
+    margin-top: 4px;
+    margin-right: 15px;
+    background-color: rgb(239,72,130);
+    color: white;
+    font-size: 12px;
+    border: 1px solid;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .login-container button:hover {
+    background-color:rgb(23,98,147);
+  }
+  input[type=text]:hover {
+    box-shadow: 0 5px 10px wheat;
+  }
+  input[type=text]:focus {
+    box-shadow: 0 5px 10px wheat;
+    outline: none;
+  }
+  input[type=password]:hover {
+    box-shadow: 0 5px 10px wheat;
+  }
+  input[type=password]:focus {
+    box-shadow: 0 5px 10px wheat;
+    outline: none;
+  }
+  
+
+
+
+  
+
+</style>
+    <body>
+        <header>
+                   <nav class="navbar navbar-style">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href=""><img class="logo" src="logo.png"></a>
+                    </div>
+	<div class="menubar">
+              	   <ul>
+                       <li class="active">Asset Management
+                           <div class="submenu">
+                               <ul>
+                                   <li><a href="login.php">Login</a></li>
+                                   
+                                   <li class="hover-me"><a href="#">Master</a>
+                                       <div class="submenu1">
+                                           <ul>
+                                               <li><a href="branchmaster.php">Branch Master</a></li>
+                                               <li><a href="devicemaster.php">Device Master</a></li>
+                                           </ul>
+                                       </div>
+                                   </li>
+                                   <li><a href="index1.php">Product & Vendor Login</a></li>
+                                   <li><a href="fileupload.php">Import File</a></li>
+                                   <li><a href="productexport.php">Export File</a></li>
+                                   
+                               </ul>
+                           </div>
+                       </li>
+                    </ul>
+	</div>
+                  
+                    <div class="login-container">
+                        <form>
+                          <input type="text"  placeholder="Username" name="username">&nbsp;&nbsp;
+                          <input type="password" placeholder="Password" name="psw">&nbsp;&nbsp;
+                          <button type="submit">Login</button>
+       
+                </div>
+                </div>
+            </nav>
+            </header>
+<div class="container">
+<!--    <button type="button" data-toggle="modal" data-target="#myModal" style="  background-color: white; margin-top: 6px; padding: 7px; border: 1px solid wheat; box-shadow: 0 5px 10px wheat;">
+    Click Me
+  </button>-->
+
+  
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+      
+        <div class="modal-header">
+          <h4 class="modal-title">Register Form</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        
+        <div class="modal-body">
+          <input type="text" placeholder="Name">&nbsp;&nbsp;
+          <input type="text" placeholder="Emp.No"><br><br>
+          <select name="Branch" style="width: 400px; padding: 7px; border: 1px solid wheat; box-shadow: 0 5px 10px wheat;">
+            <option value=""></option>
+            <option value="Arumbakkam">Arumbakkam</option>
+            <option value="Perungudi">Perungudi</option>
+            <option value="Neelangarai">Neelangarai</option>
+            <option value="Pallavaram">Pallavaram</option>
+            <option value="Bangalore">Bangalore</option>
+          </select><br><br>
+          <input type="text" placeholder="Department"style="width: 400px; padding: 7px; border: 1px solid wheat; box-shadow: 0 5px 10px wheat;"><br><br>
+          <input type="number" placeholder="Quantity" style="width: 400px; padding: 7px; border: 1px solid wheat; box-shadow: 0 5px 10px wheat;"><br><br>
+          <textarea name="message" placeholder="Description.." style="width: 400px; padding: 7px; border: 1px solid wheat; box-shadow: 0 5px 10px wheat;"></textarea>
+
+        </div>
+        
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-Success" data-dismiss="modal">Save</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Edit</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>  
